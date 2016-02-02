@@ -1,0 +1,36 @@
+{
+  "name": "Nocturne",
+  "description": "Initialize your project",
+  "main": "",
+  "authors": [
+    "Emmanuel Franc",
+    "Antoine Vallée"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/emmanuel-franc/Nocturne",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "angular": "~1.4.9",
+    "angular-animate": "~1.4.9",
+    "angular-route": "~1.4.9",
+    "bootstrap": "~3.3.6",
+    "font-awesome": "fontawesome#~4.5.0",
+    "angular-material": "~1.0.3"
+  },
+  "resolutions": {
+    "jquery": "1.9.1 - 2"
+  },
+  "devDependencies": {
+    "lodash": "~4.0.0",
+    "ng-img-crop": "ngImgCrop#~0.3.2"
+  }
+}

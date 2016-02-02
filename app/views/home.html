@@ -1,0 +1,146 @@
+<div class="section" layout="row" flex>
+
+<div>
+    <h3>Present yourself</h3>
+    {{userLove.value}}
+    <form>
+        <md-input-container>
+        <label>Name</label>
+        <input ng-model="user.name" required="true">
+    </md-input-container>
+    <md-input-container>
+    <label>Email</label>
+    <input ng-model="user.email" type="email" required="true">
+</md-input-container>
+<md-input-container>
+    <label>Phone</label>
+    <input ng-model="user.phone" type="tel" required="true">
+</md-input-container>
+<md-input-container>
+<label>Métier</label>
+<md-select ng-model="user.job">
+<md-optgroup label="Job1">
+<md-option ng-value="chip.name" ng-repeat="chip in chips | filter: {category: 'Job1' }">{{chip.name}}</md-option>
+</md-optgroup>
+<md-optgroup label="job2">
+<md-option ng-value="chip.name" ng-repeat="chip in chips | filter: {category: 'job2' }">{{chip.name}}</md-option>
+</md-optgroup>
+</md-select>
+</md-input-container>
+
+<md-input-container>
+<label>Type de Poste</label>
+<md-select ng-model="user.poste">
+<md-option ng-value="poste.name" ng-repeat="poste in poste">{{poste.name}}</md-option>
+</md-select>
+</md-input-container>
+
+    <h3>Gender:</h3>
+    <md-radio-group ng-model="user.gender">
+    <md-radio-button value="male">male</md-radio-button>
+    <md-radio-button value="female">female</md-radio-button>    
+</md-radio-group>
+
+<div >
+  <div>Select an image file: <input type="file" id="fileInput" /></div>
+  <div class="cropArea" layout="row" style="height: 230px;">
+    <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
+  <div><img ng-src="{{myCroppedImage}}" /></div>
+  </div>
+  </div>
+
+<div class="competences_wrapper" layout="column">
+    <h3> Tes compétences </h3>
+
+    <div>
+        <md-checkbox ng-repeat="competence in competences" ng-checked="exists(competence, userCompetences)" ng-click="toggle(competence, userCompetences)">
+        {{ competence.value }}
+        </md-checkbox>
+    </div>
+
+    <!-- Work with new array -->
+   <!--  <ul>
+        <li ng-repeat="competence in competences">
+            <h4>{{ competence.category }}</h4>
+
+            <ul>
+                <li>
+                    <md-checkbox  
+                    ng-repeat="value in competence.value" 
+                    ng-checked="exists(value, userCompetences)" 
+                    ng-click="toggle(value, userCompetences)"
+                    >
+                    {{ competence.value[$index] }}
+
+                    {{competence.category}}
+                </md-checkbox>
+            </li>
+        </ul>
+    </li>
+</ul> -->
+
+
+
+    <div>
+        <md-input-container>
+        <label>Catégory</label>
+        <md-select ng-model="newCompetence.category">
+        <md-option ng-repeat="competenceCategory in competenceCategorys" ng-value="competenceCategory.value">{{competenceCategory.value}}</md-option>
+        </md-select>
+        </md-input-container>
+
+<!-- Work wih new array -->
+<!--                 <md-input-container>
+        <label>Catégory</label>
+        <md-select ng-model="newCompetence.category">
+        <md-option ng-repeat="competence in competences" ng-value="competence.category">{{competence.category}}</md-option>
+        </md-select>
+        </md-input-container> -->
+
+
+
+
+        <md-input-container>
+        <input name="itemText" placeholder="Nouvelle compétence" type="text" ng-model="newCompetence.value" required/>
+        </md-input-container>
+        <md-button class="md-raised md-warn" ng-click="addElement()" ng-disabled="">Add an element</md-button>
+
+    </div>
+
+    <md-button class="md-raised md-warn" type="submit" ng-click="update(user)" value="Save">Save</md-button>
+
+</form>
+</div>
+
+
+    </div>
+
+<md-sidenav class="md-sidenav-right md-whiteframe-z2 sidenav-userid" md-component-id="right" md-is-open="true" md-is-locked-open="true">
+
+<md-content>
+
+
+<div class="card-top">
+<!-- En attendant un back -->
+<img ng-src="{{myCroppedImage}}" />
+<h3>{{user.name | capitalize}}</h3>
+</div>
+    <h3 ng-if="user.phone || user.email || user.job">Basic Infos</h3>
+    <p>{{user.gender}} </br>
+    {{user.email}}</br>
+    {{user.phone}} </br>
+      {{user.job}} <span ng-if="user.poste">-</span> {{user.poste}}</p>
+
+        <div class="competence-wrapper" ng-if="userCompetences != false">
+            <h3>Tes compétences</h3>
+            <ul><li>{{userCompetences}}</li></ul>
+
+        </div>
+                    <pre>{{userUltimate | json}}</pre>
+
+</md-content>
+</md-sidenav>
+
+
+</div>
+<!-- /.container -->

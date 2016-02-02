@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Sass Variables
+   ========================================================================== */
+
+/*----------------------------------------------------------------
+	Paths
+-----------------------------------------------------------------*/
+$pathFonts: '../fonts';
+
+/* Sprites */
+//$sprites-layout:vertical;
+//$sprites: sprite-map("sprites/*.png", $spacing:5px, $layout: $sprites-layout);
+//$sprites2x: sprite-map("sprites-retina/*.png", $spacing:10px, $layout: $sprites-layout);
+
+/*----------------------------------------------------------------
+	Colors
+-----------------------------------------------------------------*/
+/* convention */
+$color-primary: black;
+$color-warn: red;
+$color-accent: green;
+
+$color-1: #017cfe; // Bleu logo
+$color-2: #017cfe; // Bleu logo
+$color-3: #017cfe; // Bleu logo
+$color-4: #017cfe; // Bleu logo
+$color-5: #017cfe; // Bleu logo
+$color-6: #017cfe; // Bleu logo
+$color-7: #017cfe; // Bleu logo
+$color-8: #017cfe; // Bleu logo
+$color-9: #017cfe; // Bleu logo
+$color-10: #017cfe; // Bleu logo
+$color-11: #017cfe; // Bleu logo
+$color-12: #017cfe; // Bleu logo
+
+/* text */
+$color-text: black; // default text color
+$brand: $color-1;
+$brand-hover: darken($brand, 20%);
+
+/* border */
+$color-border: #DBDFE4;
+
+/* main menu sizes */
+$menu-gap:32px;
+$menu-width:240px;
+
+
+$header-height:96px;
+$header-min-height:63px;
+
+
+/*----------------------------------------------------------------
+	Fonts
+-----------------------------------------------------------------*/
+$font-default: Arial, sans-serif !default;
+
+
+/*----------------------------------------------------------------
+	Media-queries break points
+-----------------------------------------------------------------*/
+
+$screen-md-s:900px;
+$screen-s:720px;
+$screen-xs:600px;
+$screen-xxs:500px;
+$screen-xxxs:400px;
+$screen-xxxxs:350px;
+
+$screen-md: 1023px; // min size - tablet first
+$screen-lg: 1200px;
+$screen-lgplus: 1280px;
+$screen-xlg: 1300px;
+$screen-xl: 1400px;
+$screen-xxl: 1600px;
+$screen-xxxl: 1800px;
+

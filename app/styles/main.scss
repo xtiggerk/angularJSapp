@@ -1,0 +1,27 @@
+// import from bower, look at the sass gulp-tasks
+
+@import "utils";
+@import "base";
+@import "components";
+@import "layout";
+@import "pages";
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-style: normal;
+    background: #CFD8DC;
+}
+
+ul, li{
+	display: inline-block;
+}
+
+.md-sidenav-right{
+	min-width: 300px;
+}

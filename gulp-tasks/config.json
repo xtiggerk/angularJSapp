@@ -1,0 +1,7 @@
+{
+  "src": "app/",
+  "dist": "dist/",
+  "img": "assets/img/",
+  "port": 1111,
+  "portProd": 9999
+}
