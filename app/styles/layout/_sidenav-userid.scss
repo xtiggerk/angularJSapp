@@ -1,18 +1,14 @@
-.sidenav-userid{
-	padding: 20px;
-
-	.card-top{
-		@include flexbox;
-		@include justify-content (center);
-		@include align-items (center);
-		@include flex-direction (column);
-		
-		img{
-			border-radius: 50%;
-			width: 150px;
-			height: 150px;
-		}
-	}
+.sidenav-userid {
+    padding: 20px;
+    .card-top {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-direction(column);
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+    }
 }
-
-lol

@@ -27,7 +27,8 @@
     "angular-material": "~1.0.3"
   },
   "resolutions": {
-    "jquery": "1.9.1 - 2"
+    "jquery": "1.9.1 - 2",
+    "angular": "~1.4.9"
   },
   "devDependencies": {
     "lodash": "~4.0.0",
